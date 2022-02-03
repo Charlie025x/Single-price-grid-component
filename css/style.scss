@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');:root {
   --clr-cyan: hsl(179, 62%, 43%);
   --clr-bright-yellow: hsl(71, 73%, 54%);
 
@@ -20,13 +18,14 @@ body {
 }
 
 .card-container {
-  width: 90%;
+  width: 85%;
   max-width: 30rem;
   border-radius: .3rem;
   overflow: hidden;
   // width: 20rem;
   .card {
     padding: 1rem;
+    line-height: 1.5;
     h2 {
       font-weight: 700;
       font-size: 1.3rem;
@@ -39,6 +38,7 @@ body {
       color: var(--clr-cyan);
     & + p {
       color: var(--clr-bright-yellow);
+      font-weight: 700;
       margin-bottom: 1rem;
     }
     }
@@ -50,10 +50,41 @@ body {
   .card-2 {
     background-color: var(--clr-cyan);
     color: white;
+    h2 + p {
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+      a {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-right: .5rem;
+      }
+    }
+      button {
+        background-color: var(--clr-bright-yellow);
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: .3rem;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          transform: translateY(5px);
+        }
+      }
   }
   .card-3 {
     background-color: rgb(114, 202, 195);
     color: white;
+    p {
+      font-weight: 200;
+      // white-space: pre; //reserves line breaks made in html but distorts the card
+    }
   }
 }
 
